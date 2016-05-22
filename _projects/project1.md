@@ -6,4 +6,4 @@ layout: project
 name: project1
 ---
 
-test test
+description of project
