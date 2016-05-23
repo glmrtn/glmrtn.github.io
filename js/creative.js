@@ -17,7 +17,7 @@
     });
 
     // Highlight the top nav as scrolling occurs
-    $('body').scrollspy({
+    $('#page-top').scrollspy({
         target: '.navbar-fixed-top',
         offset: 51
     })

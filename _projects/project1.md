@@ -1,8 +1,7 @@
 ---
 title: Project 1
-category: Weddings
+category: Wedding
 img: 1.jpg
-layout: project
 name: project1
 ---
 

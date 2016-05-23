@@ -1,5 +1,5 @@
 collections:
     projects:
-        output: true
+        output: false
     frontpage:
         output: false

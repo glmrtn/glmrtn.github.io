@@ -1,0 +1,76 @@
+---
+title: Gillian Lee Photography | Portfolio
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    {% include header.html %}
+
+</head>
+
+<body id="project-top">
+
+    {% include navbar.html %}
+
+    <div class="container gallery">
+        <div class="row">
+
+            <div class="col-md-2" id="leftCol">
+
+                <ul class="nav nav-stacked" id="sidebar">
+                    {% for p in site.projects %}
+                        <li><a href="#{{ p.name }}">{{ p.title }}</a></li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+            <div class="col-md-10" id="mainCol">
+
+                {% for p in site.projects %}
+                    <div class="col-md-12">
+                        <h1 class="page-header" id="{{p.name}}">{{p.title}}</h1>
+                    </div>
+
+                    {{ p.content }}
+
+                    <div class="row">
+                        {% for image in site.static_files %}
+                            {% assign project_imgs = 'img/' | append: p.name %}
+                            {% if image.path contains project_imgs %}
+                            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                                <a class="thumbnail" href="{{ image.path }}">
+                                    <img class="img-responsive" src="{{ image.path }}" alt="">
+                                </a>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+
+                    </div>
+
+                    <hr>
+                {% endfor %}
+
+                <!-- Footer -->
+                <footer>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>Copyright &copy; Gillian Martin 2016</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    {% include footer.html %}
+    <script src="{{ site.github.url }}/js/project.js"></script>
+
+</body>
+
+</html>
+
+
+
