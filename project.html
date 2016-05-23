@@ -19,36 +19,39 @@ title: Gillian Lee Photography | Portfolio
         <div class="row">
 
             <div class="col-md-2" id="leftCol">
-
-                <ul class="nav nav-stacked" id="sidebar">
-                    {% for p in site.projects %}
-                        <li><a href="#{{ p.name }}">{{ p.title }}</a></li>
-                    {% endfor %}
-                </ul>
-
+                <nav class="navbar navbar-default affix">
+                    <ul class="nav navbar-nav navbar-stacked" id="sidebar">
+                        {% for p in site.projects %}
+                            <li><a class="page-scroll" href="#{{ p.name }}">{{ p.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </nav>
             </div>
+
             <div class="col-md-10" id="mainCol">
 
                 {% for p in site.projects %}
-                    <div class="col-md-12">
-                        <h1 class="page-header" id="{{p.name}}">{{p.title}}</h1>
-                    </div>
+                    <section id="{{p.name}}">
+                        <div class="col-md-12">
+                            <h1 class="page-header">{{p.title}}</h1>
+                        </div>
 
-                    {{ p.content }}
+                        {{ p.content }}
 
-                    <div class="row">
-                        {% for image in site.static_files %}
-                            {% assign project_imgs = 'img/' | append: p.name %}
-                            {% if image.path contains project_imgs %}
-                            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                                <a class="thumbnail" href="{{ image.path }}">
-                                    <img class="img-responsive" src="{{ image.path }}" alt="">
-                                </a>
-                            </div>
-                            {% endif %}
-                        {% endfor %}
+                        <div class="row">
+                            {% for image in site.static_files %}
+                                {% assign project_imgs = 'img/' | append: p.name %}
+                                {% if image.path contains project_imgs %}
+                                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                                    <a class="thumbnail" href="{{ image.path }}">
+                                        <img class="img-responsive" src="{{ image.path }}" alt="">
+                                    </a>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
 
-                    </div>
+                        </div>
+                    </section>
 
                     <hr>
                 {% endfor %}

@@ -149,6 +149,8 @@ aside {
     .navbar-default.affix {
         border-color: rgba(34,34,34,.05);
         background-color: #fff;
+        border-left-width: 0px;
+        border-right-width: 0px;
     }
 
     .navbar-default.affix .navbar-header .navbar-brand {
@@ -171,6 +173,8 @@ aside {
         color: #4f8ca1;
     }
 }
+
+
 
 header {
     position: relative;
@@ -475,20 +479,11 @@ body {
     webkit-tap-highlight-color: #222;
 }
 
-
-@media (min-width: 979px) {
-  #sidebar.affix-top {
-    position: static;
-  	margin-top:100px;
-  	width:150px;
-  }
-
-  #sidebar.affix {
+#sidebar {
     position: fixed;
-    top:70px;
+    margin-top:100px;
     width:150px;
   }
-}
 
 #sidebar li.active {
   	border:0 #4f8ca1 solid;
