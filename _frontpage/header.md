@@ -2,4 +2,4 @@
 title: Gillian Martin Photography
 label: header
 ---
-Photos by Gill (fill this in)
+Capturing your memories, one snap at a time.
