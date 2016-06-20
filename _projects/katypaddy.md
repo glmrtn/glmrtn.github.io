@@ -1,7 +1,7 @@
 ---
 title: Kaity & Paddy
 category: Wedding
-img: DSC_0288
+img: DSC_0288.jpg
 name: katypaddy
 ---
 
