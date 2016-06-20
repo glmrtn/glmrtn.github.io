@@ -1,4 +1,4 @@
-{% if page.path contains "project" %}
+{% if page.path contains "portfolio" %}
     {% assign prefix = site.github.url | append: "/" %}
 {% else %}
     {% assign prefix = "" %}
@@ -25,7 +25,7 @@
                     <a class="page-scroll" href="{{ prefix }}#about">About</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="{{ prefix }}#portfolio">Portfolio</a>
+                    <a class="page-scroll" href="portfolio.html">Portfolio</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="{{ prefix }}#contact">Contact</a>
