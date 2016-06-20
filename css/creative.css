@@ -482,10 +482,17 @@ body {
 #sidebar {
     position: fixed;
     margin-top:100px;
-    width:150px;
+    width:200px;
+    display: none;
   }
 
-#sidebar li.active {
-  	border:0 #4f8ca1 solid;
-  	border-right-width:4px;
+@media(min-width:1024px) {
+    #sidebar {
+        display: block;
+    }
+}
+
+
+.sidebar-sub {
+    padding-left: 10px;
 }
