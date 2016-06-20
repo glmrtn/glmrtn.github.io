@@ -20,15 +20,15 @@ title: Gillian Lee Photography | Portfolio
 
             {% assign types = "Knitting;Family;Wedding" | split: ";" %}
 
-            <div class="col-md-2" id="leftCol">
+            <div class="col-md-3" id="leftCol">
                 <nav class="navbar navbar-default affix">
                     <ul class="nav navbar-nav navbar-stacked" id="sidebar">
                         {% for type in types %}
                         <li><a class="page-scroll" href="#{{ type }}">{{ type }}</a></li>
-                        <ul class="nav navbar-nav navbar-stacked">
+                        <ul class="nav navbar-nav navbar-stacked sidebar-sub">
                         {% assign projects = (site.projects | where: "category", type) %}
                         {% for p in projects %}
-                            <li><a class="page-scroll" href="#{{ p.name }}">&nbsp;&nbsp;&nbsp;&nbsp;{{ p.title }}</a></li>
+                            <li><a class="page-scroll" href="#{{ p.name }}">{{ p.title }}</a></li>
                         {% endfor %}
                         </ul>
                         {% endfor %}
@@ -36,7 +36,7 @@ title: Gillian Lee Photography | Portfolio
                 </nav>
             </div>
 
-            <div class="col-md-10" id="mainCol">
+            <div class="col-md-9" id="mainCol">
                 {% for type in types %}
                 <section id="{{type}}">
                     {% assign projects = (site.projects | where: "category", type) %}

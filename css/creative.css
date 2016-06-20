@@ -482,7 +482,7 @@ body {
 #sidebar {
     position: fixed;
     margin-top:100px;
-    width:150px;
+    width:200px;
     display: none;
   }
 
@@ -492,7 +492,7 @@ body {
     }
 }
 
-#sidebar li.active {
-  	border:0 #4f8ca1 solid;
-  	border-right-width:4px;
+
+.sidebar-sub {
+    padding-left: 10px;
 }
