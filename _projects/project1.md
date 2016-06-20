@@ -1,8 +1,8 @@
 ---
-title: Project 1
+title: Kaity & Paddy
 category: Wedding
 img: 1.jpg
 name: project1
 ---
 
-description of project
+An excellent wedding out in Alberta!
