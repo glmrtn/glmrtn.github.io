@@ -1,7 +1,7 @@
 ---
 title: Project 2
 category: Knitting
-img: 1.jpg
-name: project2
+img: 20131117-DSC_3125.jpg
+name: Knitwear
 ---
 description of project
