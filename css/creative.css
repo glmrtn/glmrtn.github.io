@@ -483,7 +483,14 @@ body {
     position: fixed;
     margin-top:100px;
     width:150px;
+    display: none;
   }
+
+@media(min-width:1024px) {
+    #sidebar {
+        display: block;
+    }
+}
 
 #sidebar li.active {
   	border:0 #4f8ca1 solid;
