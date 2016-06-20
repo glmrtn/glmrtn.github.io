@@ -11,5 +11,9 @@ services:
     - type: Family
       description: Family Portraits and Baby Sessions
       icon: group
+    - type: Event
+      description: Documenting community or public events
+      icon: octicon calendar
+
     
 ---
