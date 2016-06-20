@@ -13,7 +13,7 @@ services:
       icon: group
     - type: Event
       description: Documenting community or public events
-      icon: octicon calendar
+      icon: calendar
 
     
 ---
