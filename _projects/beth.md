@@ -1,5 +1,5 @@
 ---
-title: Beth Graham
+title: Beth Graham Designs
 category: Knitting
 img: DSC_2738.jpg
 name: beth

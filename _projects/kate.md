@@ -1,5 +1,5 @@
 ---
-title: Kate Atherley
+title: Kate Atherley Designs
 category: Knitting
 img: DSC_0148.JPG
 name: kate
