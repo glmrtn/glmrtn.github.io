@@ -3,15 +3,16 @@ title: Services
 label: services
 services:
     - type: Knitting
-      description: comment about knitting photos
+      description: Photography done for publishing knitwear designers
       icon: scissors
     - type: Weddings
-      description: comment about weddings photos
+      description: Capturing the joy of that special day
       icon: heart
     - type: Family
-      description: comment about family photos
+      description: Documenting families, together
       icon: group
     - type: other?
       description: other things?
-      icon: ellipsis-v
+      icon: ellipsis
+
 ---
