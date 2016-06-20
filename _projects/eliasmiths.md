@@ -1,7 +1,7 @@
 ---
 title: The Eliasmiths
 category: Family
-img: DSC_4203.jpg
+img: 3DSC_4203.jpg
 name: eliasmiths
 ---
 
