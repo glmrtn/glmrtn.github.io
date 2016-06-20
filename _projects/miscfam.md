@@ -1,7 +1,7 @@
 ---
 title: Miscellaneous Family Shots
 category: Family
-img: DSC_3060.jpg
+img: DSe_3060.jpg
 name: miscfam
 ---
 
