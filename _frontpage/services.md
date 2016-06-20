@@ -9,7 +9,7 @@ services:
       description: Capturing the joy of that special day
       icon: heart
     - type: Family
-      description: Documenting families, together
+      description: Family Portraits and Baby Sessions
       icon: group
     - type: other?
       description: other things?
