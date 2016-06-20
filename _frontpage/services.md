@@ -11,8 +11,5 @@ services:
     - type: Family
       description: Family Portraits and Baby Sessions
       icon: group
-    - type: other?
-      description: other things?
-      icon: ellipsis
-
+    
 ---
