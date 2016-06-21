@@ -49,22 +49,34 @@ title: Gillian Lee Photography | Portfolio
                             {{ p.content }}
 
                             <div class="row">
-                                {% for image in site.static_files %}
-                                    {% assign project_imgs = 'img/' | append: p.name %}
-                                    {% if image.path contains project_imgs %}
+                                {% assign img_names = 'img/' | append: p.name %}
+
+                                {% assign project_imgs = "" | split: "|" %}
+                                {% for item in site.static_files %}
+                                {% if item.path contains img_names %}
+                                    {% assign project_imgs = project_imgs | push: item %}
+                                {% endif %}
+                                {% endfor %}
+
+                                {% assign i = 0 %}
+                                {% for img in project_imgs %}
                                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                                        <a class="thumbnail" href="{{ image.path }}">
-                                            <img class="img-responsive" src="{{ image.path }}" alt="">
+                                        <a class="thumbnail" href="#lightbox_{{ p.name }}" data-toggle="modal" data-slide-to="{{ i }}">
+                                            <img class="img-responsive" src="{{ img.path }}" alt="">
                                         </a>
                                     </div>
-                                    {% endif %}
+                                    {% assign i = i | plus: 1 %}
                                 {% endfor %}
 
                             </div>
                         </section>
 
                         <hr>
+
+
                     {% endfor %}
+
+
                 </section>
                 {% endfor %}
 
@@ -79,6 +91,54 @@ title: Gillian Lee Photography | Portfolio
             </div>
         </div>
     </div>
+
+    {% for type in types %}
+        {% assign projects = (site.projects | where: "category", type) %}
+        {% for p in projects %}
+
+            {% assign img_names = 'img/' | append: p.name %}
+
+            {% assign project_imgs = "" | split: "|" %}
+            {% for item in site.static_files %}
+            {% if item.path contains img_names %}
+                {% assign project_imgs = project_imgs | push: item %}
+            {% endif %}
+            {% endfor %}
+
+            <div class="modal fade and carousel slide" id="lightbox_{{ p.name }}">
+                <div class="vertical-alignment-helper">
+                    <div class="modal-dialog vertical-align-center">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <ol class="carousel-indicators">
+                                    {% assign i = 0 %}
+                                    {% for img in project_imgs %}
+                                        <li data-target="#lightbox_{{ p.name }}" data-slide-to="{{ i }}"></li>
+                                        {% assign i = i | plus: 1 %}
+                                    {% endfor %}
+                                </ol>
+                                <div class="carousel-inner">
+                                    {% assign active = "active" %}
+                                    {% for img in project_imgs %}
+                                        <div class="item {{ active }}">
+                                            <img class="modal-img" src="{{ img.path }}" alt="">
+                                        </div>
+                                        {% assign active = "" %}
+                                    {% endfor %}
+                                </div><!-- /.carousel-inner -->
+                                <a class="left carousel-control" href="#lightbox_{{ p.name }}" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#lightbox_{{ p.name }}" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div><!-- /.modal-body -->
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+            </div>
+        {% endfor %}
+    {% endfor %}
 
     {% include footer.html %}
     <script src="{{ site.github.url }}/js/project.js"></script>
